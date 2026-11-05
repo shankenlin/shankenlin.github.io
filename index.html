@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shan Lin - Stony Brook University</title>
+
+  <!-- Google Scholar / Academic Metadata -->
+  <meta name="citation_author" content="Shan Lin">
+  <meta name="description" content="Homepage of Dr. Shan Lin, Associate Professor in Electrical & Computer Engineering at Stony Brook University. Research in Cyber-Physical Systems, IoT, Smart Health, and AI.">
+
+  <!-- Metadata for New 2026 Papers -->
+  <meta name="citation_title" content="Unified Provisioning of Energy and Transportation Service Flexibility with E-taxi Fleets: A Dual Perspective">
+  <meta name="citation_author" content="L. Zhou">
+  <meta name="citation_author" content="Y. Zhao">
+  <meta name="citation_author" content="Shan Lin">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="ACM International Conference on Future and Sustainable Energy Systems (e-Energy)">
+
+  <meta name="citation_title" content="MARLIN: LLM-Guided Multi-Agent Reinforcement Learning with Murmuration Intelligence for Reservoir Management">
+  <meta name="citation_author" content="H. Fu">
+  <meta name="citation_author" content="Shan Lin">
+  <meta name="citation_author" content="G. Xiong">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="International Conference on Autonomous Agents and Multiagent Systems (AAMAS)">
+
+  <meta name="citation_title" content="Spatial Resiliency in Cyber-Physical Systems">
+  <meta name="citation_author" content="Z. Zhang">
+  <meta name="citation_author" content="H. Chen">
+  <meta name="citation_author" content="N. Paoletti">
+  <meta name="citation_author" content="Shan Lin">
+  <meta name="citation_author" content="S. A. Smolka">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="International Conference on Embedded Software (EMSOFT)">
+
+  <!-- Minimal Classless CSS Framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  
+  <style>
+    :root {
+      --pico-font-size: 95%;
+      --pico-primary: #fde047;
+      --pico-primary-hover: #ffffff;
+      --pico-primary-background: #d97706;
+    }
+
+    body {
+      background: radial-gradient(circle at top right, #312e81 0%, transparent 60%),
+                  linear-gradient(135deg, #1e293b 0%, #1e3a8a 45%, #881337 100%) !important;
+      background-attachment: fixed;
+      color: #ffffff !important;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Force all text in body to crisp white */
+    p, li, span, td, div {
+      color: #ffffff !important;
+    }
+
+    /* Headings in bold pure white */
+    h1, h2, h3, h4 {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+
+    /* Target Affiliation Links & Contact Block specifically */
+    .profile-affiliation a {
+      color: #7dd3fc !important; /* Bright Sky Blue */
+      font-weight: 600 !important;
+      text-decoration: underline;
+    }
+
+    .profile-affiliation a:hover {
+      color: #ffffff !important;
+    }
+
+    .profile-contact {
+      color: #ffffff !important;
+      font-size: 0.95em !important;
+    }
+
+    .profile-contact a {
+      color: #fde047 !important; /* Bright Gold for Phone & CV */
+      font-weight: 700 !important;
+      text-decoration: underline;
+    }
+
+    .profile-contact a:hover {
+      color: #ffffff !important;
+    }
+
+    /* Standardized link styles */
+    a {
+      color: #fde047 !important;
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.15s ease-in-out;
+    }
+
+    a:hover {
+      color: #ffffff !important;
+    }
+
+    /* High-contrast email badge */
+    code {
+      background: rgba(15, 23, 42, 0.85) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      color: #38bdf8 !important; /* Bright cyan email text */
+      padding: 3px 8px !important;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* Accessibility focus ring */
+    a:focus, button:focus, summary:focus {
+      outline: 3px solid #fde047 !important;
+      outline-offset: 3px !important;
+    }
+
+    /* Navigation styling */
+    header nav ul li a { 
+      font-weight: bold; 
+      color: #ffffff !important;
+      text-decoration: none;
+    }
+    
+    header nav ul li a.secondary {
+      color: #fde047 !important;
+    }
+
+    .hero-grid { 
+      display: grid; 
+      grid-template-columns: 220px 1fr; 
+      gap: 2rem; 
+      align-items: start; 
+    } 
+    
+    /* Center Panel: Blue Background with Subtle Crimson Tint (News) */
+    .glass-card-news {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(88, 28, 135, 0.25) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(244, 114, 182, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    /* Right Panel: Warmer Blue Background with Stronger Crimson Tint (Papers) */
+    .glass-card-papers {
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.35) 0%, rgba(136, 19, 55, 0.4) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(251, 113, 133, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    /* Links inside scrollable cards */
+    .glass-card-news a, .glass-card-papers a {
+      color: #38bdf8 !important;
+      font-weight: bold;
+    }
+
+    .glass-card-news a:hover, .glass-card-papers a:hover {
+      color: #ffffff !important;
+    }
+
+    /* Award Styling */
+    .award-text { 
+      color: #fde047;
+      font-weight: bold; 
+    }
+
+    .research-areas p { margin-bottom: 0.8rem; }
+
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .hero-grid img { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="container" role="banner">
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><strong style="color: #ffffff; font-size: 1.1em;">LINX Lab</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#" class="secondary" aria-current="page">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main-content" tabIndex="-1">
+
+    <!-- Profile Header Section -->
+    <section class="hero-grid" aria-label="Biographical Overview">
+      <div>
+        <img src="DSC02359_crop1.JPG" alt="Dr. Shan Lin headshot photo" style="width: 100%; max-width: 200px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.2);">
+      </div>
+      <div>
+        <h1 style="margin-bottom: 0.2rem; color: #ffffff;">Shan Lin</h1>
+        <p style="margin-bottom: 0.5rem; color: #fde047; font-size: 1.1em;"><strong>Associate Professor</strong></p>
+        <p class="profile-affiliation" style="margin-bottom: 1rem; line-height: 1.6;">
+          <a href="https://www.stonybrook.edu/commcms/electrical/">Department of Electrical and Computer Engineering</a><br>
+          <a href="https://www.cs.stonybrook.edu/">Affiliated with Department of Computer Science</a><br>
+          <a href="http://www.stonybrook.edu/">Stony Brook University</a>
+        </p>
+        <p class="profile-contact" style="margin-bottom: 0.5rem;">
+          📍 Office: 249 Light Engineering &nbsp;|&nbsp; 
+          📞 Phone: <a href="tel:16316328398" aria-label="Call Office Phone Number">(631) 632-8398</a><br>
+          ✉️ Email: <code style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); color: #38bdf8; padding: 2px 6px; border-radius: 4px;">shan.x.lin [at] stonybrook.edu</code> &nbsp;|&nbsp;
+          📄 <a href="CV-Shanlin.pdf" target="_blank" aria-label="Download Shan Lin's CV as PDF file">Download CV (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <hr style="border-color: rgba(255,255,255,0.15);">
+
+    <!-- Main Content Layout -->
+    <div class="grid">
+      
+      <!-- Left Column: Bio & Research Areas -->
+      <div>
+        <section aria-labelledby="heading-bio">
+          <h2 id="heading-bio">Biographical Sketch</h2>
+          <p>
+            I joined Stony Brook University as an Assistant Professor in August 2014. I received my Ph.D. in Computer Science working under the direction of Prof. John A. Stankovic at the University of Virginia. 
+          </p>
+          <p>
+            My work has won three Best Paper Awards and three Best Paper Finalists. I am a recipient of the NSF CAREER Award. I am a senior member of ACM and IEEE.
+          </p>
+        </section>
+
+        <section class="research-areas" aria-labelledby="heading-research">
+          <h2 id="heading-research">Research Areas</h2>
+          <p><strong>Cyber-Physical Systems:</strong> My group investigates data-driven control, formal safety verification, and decentralized coordination across interconnected cyber-physical platforms. We build real-time control frameworks for smart hospitals, autonomous e-taxi fleets, and energy-efficient building operations.</p>
+          <p><strong>Artificial Intelligence:</strong> My focus is on physics-informed, human-centered AI for digital health monitoring and urban service analytics. Recent projects involve learning digital biomarkers, emotional cues, and closed-loop treatment policies for medical and smart city applications.</p>
+          <p><strong>Sensing, Communications & Networking:</strong> My work in this area focuses on non-isotropic sensing architectures, cross-layer network protocol design, and real-time wireless communications for safety-critical systems.</p>
+        </section>
+      </div>
+
+      <!-- Center Column: News -->
+      <div>
+        <section aria-labelledby="heading-news">
+          <h2 id="heading-news">News & Events</h2>
+          <article class="glass-card-news" style="padding: 1.25rem; max-height: 650px; overflow-y: auto;" tabIndex="0" aria-label="Scrollable news list">
+            <p><strong>2026:</strong> Paper <em>Unified Provisioning of Energy and Transportation Service Flexibility with E-taxi Fleets: A Dual Perspective</em> accepted to <strong>ACM e-Energy 2026</strong>.</p>
+            <p><strong>2026:</strong> Paper <em>Spatial Resiliency in Cyber-Physical Systems</em> accepted to <strong>EMSOFT 2026</strong>.</p>
+            <p><strong>Oct 2025:</strong> <span class="award-text">🏆 Best Paper Award</span> at EMSOFT 2025 for paper on Cumulative Time STL. <a href="CT-STL.pptx" aria-label="Download presentation slides for EMSOFT 2025 paper">[Slides]</a></p>
+            <p><strong>Mar 2025:</strong> Paper <em>mAP: Abandoned Properties Detection using Multifaceted Urban Service Data</em> accepted to <strong>ICDE 2025</strong>.</p>
+            <p><strong>Jun 2024:</strong> Completed the NIH mHealth Institute training program at UCLA.</p>
+            <p><strong>Jun 2023:</strong> Student Hongkai Chen joined Chinese University of Hong Kong as a Research Assistant Professor.</p>
+            <p><strong>Jun 2022:</strong> <span class="award-text">🏆 Best Paper Award</span> at FORMATS 2022 for paper on CPS Resilience. <a href="resilience_formats_slides_v3.pptx" aria-label="Download presentation slides for FORMATS 2022 paper">[Slides]</a></p>
+            <p><strong>Jun 2022:</strong> Student Yukun Yuan joined UT Chattanooga as a Tenure-Track Assistant Professor.</p>
+            <p><strong>May 2021:</strong> <span class="award-text">🏆 Best Paper Award</span> at ACM/IEEE ICCPS 2021 for paper <em>DeResolver</em>. <a href="https://www.youtube.com/watch?v=XwYH2vryn-I" aria-label="Watch YouTube video presentation for DeResolver paper">[Presentation]</a></p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Right Column: Recent Publications -->
+      <div>
+        <section aria-labelledby="heading-pubs">
+          <h2 id="heading-pubs">Recent Papers</h2>
+          <article class="glass-card-papers" style="padding: 1.25rem; max-height: 650px; overflow-y: auto;" tabIndex="0" aria-label="Scrollable publication list">
+            <p><strong>EMSOFT 2026</strong><br>
+            <em>Spatial Resiliency in Cyber-Physical Systems.</em><br>
+            <small style="color: #cbd5e1;">Z. Zhang, H. Chen, N. Paoletti, S. Lin, S. A. Smolka.</small></p>
+
+            <p><strong>ACM e-Energy 2026</strong><br>
+            <em>Unified Provisioning of Energy and Transportation Service Flexibility with E-taxi Fleets: A Dual Perspective.</em><br>
+            <small style="color: #cbd5e1;">L. Zhou, Y. Zhao, S. Lin.</small></p>
+
+            <p><strong>AAMAS 2026</strong><br>
+            <em>MARLIN: LLM-Guided Multi-Agent Reinforcement Learning with Murmuration Intelligence for Reservoir Management.</em><br>
+            <small style="color: #cbd5e1;">H. Fu, S. Lin, G. Xiong.</small></p>
+
+            <p><strong>SenSys 2025</strong><br>
+            <em>SHADE-AD: An LLM-Based Framework for Synthesizing Activity Data of Alzheimer's Patients.</em><br>
+            <small style="color: #cbd5e1;">H. Fu, H. Chen, S. Lin, G. Xing.</small></p>
+
+            <p><strong>ICDE 2025</strong><br>
+            <em>mAP: Abandoned Properties Detection using Multifaceted Urban Service Data.</em><br>
+            <small style="color: #cbd5e1;">L. Zhou, A. Edomwonyi, S. Lin.</small></p>
+
+            <p><strong>ICCPS 2025</strong><br>
+            <em>eFlx: Provisioning of Energy Flexibility for E-taxi Fleet.</em><br>
+            <small style="color: #cbd5e1;">L. Zhou, Y. Zhao, Y. Yuan, C. Xu, S. Lin.</small></p>
+          </article>
+        </section>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="container" role="contentinfo" style="text-align: center; margin-top: 3rem; padding-bottom: 2rem; color: #cbd5e1;">
+    <small>© Shan Lin — Stony Brook University</small>
+  </footer>
+
+</body>
+</html>
